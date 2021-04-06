@@ -26,7 +26,7 @@ const pickr = Pickr.create({
     components: {
 
         // Main components
-        preview: true,
+        preview: false,
         opacity: true,
         hue: true,
 
@@ -38,7 +38,7 @@ const pickr = Pickr.create({
             hsva: true,
             cmyk: true,
             input: true,
-            clear: true,
+            clear: false,
             save: true
         }
     }
