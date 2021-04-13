@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta name="author" content="BoostLive" />
+    <meta name="description" content="Color Picker" />
+    <meta
+      name="keywords"
+      content="color picker, advanced color picker, vec3 to rgb, rgb to vec3"
+    />
 
+    <!-- Pickr monolith theme -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css"
+    />
 
-<head>
-		<meta name="author"  content="BoostLive">
-		<meta name="description" content="Color Picker">
-		<meta name="keywords" content="color picker, advanced color picker, vec3 to rgb, rgb to vec3">
+    <!-- My css -->
+    <link rel="stylesheet" href="styles/style.css">
 
-		<!-- Color picker embed -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"> <!-- 'classic' theme -->
-		
-		<!-- My css -->
-		<link rel="stylesheet" href="./css/style.css">
+    <title>Color Picker</title>
+  </head>
 
-		<title>Color Picker</title>
-</head>
+  <body>
+    <div class="container">
 
-<body>
-		<h1>Color Picker</h1>
-		<hr />
-		
-		<div class="field">
-				<p>Hello lol lmao xdd<br>i dont know what to write here<br>thats how mafia works</p>
-		</div>
+		  <!-- Title -->
+      <div class="title">Color Picker</div>
 
-		<div class="color-picker"></div>
+      <!-- Color button -->
+			<div class="color-button">
+        <button class="color-picker" id="buttonChangeColor">Click to change color</button>
+      </div>
 
-		<script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
-		<script src="./scripts/main.js"></script>
-</body>
+      <div class="grid-container">
 
+        <!-- RGBA INPUT -->
+        <div class="input-color">
+          <input type="text" id="rgbInput" value="255, 255, 255, 1" required onkeyup="UpdateWithRGB(this.value)">
+          <div class="item-details">RGBA</div>
+        </div>
 
+        <!-- VECTOR INPUT -->
+        <div class="input-color">
+          <input type="text" id="vecInput" value="1., 1., 1., 1." required onkeyup="UpdateWithVector(this.value)">
+          <div class="item-details">VEC</div>
+        </div>
+
+        <!-- HEX INPUT -->
+        <div class="input-color">
+          <input type="text" id="hexInput" value="#FFFFFF" required onkeyup="UpdateWithHex(this.value)">
+          <div class="item-details">HEX</div>
+        </div>
+
+        <!-- HSVA INPUT -->
+        <div class="input-color">
+          <input type="text" id="hsvInput" value="0°, 0%, 100%, 1" required onkeyup="UpdateWithHSV(this.value)">
+          <div class="item-details">HSVA</div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Pickr modern bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+    <!-- My script -->
+    <script src="scripts/rgbToVec.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
 </html>
