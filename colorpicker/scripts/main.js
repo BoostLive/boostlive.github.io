@@ -69,7 +69,7 @@ function UpdateColor(color)
 	console.log(desiredHex);
 
 	// HSVA
-	const desiredHSV = `${Math.round(color.h)}°, ${Math.round(color.s)}%, ${Math.round(color.v)}%, ${color.a}°`;
+	const desiredHSV = `${Math.round(color.h)}°, ${Math.round(color.s)}%, ${Math.round(color.v)}%, ${color.a}`;
 
 	// Update every input/textbox
 	RGBInput.value = desiredRGB;
