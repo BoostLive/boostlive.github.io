@@ -6,6 +6,11 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 100vh;
   color: white;
-  background: linear-gradient(135deg, #2c2c2c, #252525);
+  background: -webkit-linear-gradient(-45deg, #383234, #231F20);
 }
