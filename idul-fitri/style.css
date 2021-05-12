@@ -58,7 +58,7 @@ section p {
 	padding: 10px;
 	width: 80%;
 	color: white;
-	text-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+	text-shadow: 0 5px 4px rgba(0, 0, 0, 1);
 	box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.2);
 	z-index: 1;
 	backdrop-filter: Blur(10px);
