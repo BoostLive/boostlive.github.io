@@ -1,60 +1,108 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  /* padding: 10px; */
-  height: 100vh;
-  color: white;
-  background: #202731;
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  color: white;
+  background: #001220;
+  overflow-x: hidden;
+}
+/*
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 6px;
+  background-color: #001f4d;
+  box-shadow: 0 10px 3 3 rgba(255, 0, 0, 0.87);
+}
+
+a {
+  padding: 9px;
+  margin: 0px 2px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: transparent;
+}
+*/
 section {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 400px;
+  min-height: 100px;
   padding: 100px 20vw;
 }
 
-.curve {
-  position: absolute;
-  height: 250px;
+/* ------------------ Section Colors ------------------ */
+.dark { background: #001220; }
+.red { background: #F2542D; }
+.blue { background: #0066FF; }
+.light-blue { background: #92DCE5; }
+
+
+/* ------------------ NAVIGATION BAR ------------------ */
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: transparent; /* #001f4d or transparent */
+}
+
+header .logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+header li, a {
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.navlinks ul {
+  list-style-type: none;
+}
+
+.navlinks li {
+  display: inline-block;
+  padding: 0 15px;
+}
+
+.navlinks li a {
+  transition: all .3s ease 0s;
+}
+
+.navlinks li a:hover {
+  color: #00b4e0;
+}
+
+header .discord {
+  margin-left: 20px;
+}
+
+
+/* ---------------------------------------------------- */
+
+.spacer {
+  aspect-ratio: 960/300;
   width: 100%;
-  bottom: 0;
-  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.curve::before {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  transform: translate(85%, 60%);
-  background-color: #FF5A5F;
+.dark-blue-wave {
+  background-image: url('./assets/dark-to-blue-wave.svg');
 }
 
-.curve::after {
-  content: '';
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 55%;
-  height: 100%;
-  background-color: #454b61;
-  transform: translate(-4%, 40%);
-  z-index: 1;
+.blue-lightBlue-wave {
+  background-image: url('./assets/blue-to-lightBlue-wave.svg');
 }
-
-.dark { background: #454b61; }
-.red { background: #FF5A5F; }
-.blue { background: #5DB7DE; }
-.purple { background: #AF42AE }
-.green { background: #0CCA4A; }
