@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -13,25 +15,7 @@ body {
   background: #001220;
   overflow-x: hidden;
 }
-/*
-ul {
-  list-style-type: none;
-  overflow: hidden;
-  padding: 6px;
-  background-color: #001f4d;
-  box-shadow: 0 10px 3 3 rgba(255, 0, 0, 0.87);
-}
 
-a {
-  padding: 9px;
-  margin: 0px 2px;
-  display: block;
-  color: white;
-  text-decoration: none;
-  border-radius: 3px;
-  background-color: transparent;
-}
-*/
 section {
   position: relative;
   display: flex;
@@ -39,6 +23,10 @@ section {
   align-items: center;
   min-height: 100px;
   padding: 100px 20vw;
+}
+
+#about section {
+  color: #001220;
 }
 
 /* ------------------ Section Colors ------------------ */
@@ -64,7 +52,12 @@ header .logo {
 
 header li, a {
   color: #edf0f1;
-  text-decoration: none;
+  text-decoration: italic;
+}
+
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 .navlinks ul {
