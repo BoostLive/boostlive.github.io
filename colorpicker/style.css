@@ -90,3 +90,27 @@ form .input-boxes .input-box
 	border: 1.1px solid #808080;
 	background-color: #414141;
 }
+
+@media (max-width: 584px) {
+	.container {
+		max-width: 100%;
+	}
+
+	.container form .input-boxes {
+		max-height: 300px;
+		overflow-y: scroll;
+
+		background-color: rgba(255, 255, 255, .05);
+		border-radius: 5px;
+		padding: 5px;
+	}
+
+	form .input-boxes .input-box {
+		margin-bottom: 15px;
+		width: 100%;
+	}
+
+	.input-boxes::-webkit-scrollbar {
+		width: 0;
+	}
+}
